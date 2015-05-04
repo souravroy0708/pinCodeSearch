@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>AJAX Error Handling Demo</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+    $.ajax({
+            url: "/v0/jobs/wrong-job-id",
+            type: "GET",
+            dataType: "json",
+            success: function (msg) {
+                alert(msg);
+            },
+            statusCode: {
+                400: function(jqXHR, textStatus, errorThrown) {
+                  errorObj = $.parseJSON(jqXHR.responseText)
+                  alert("Client Error " + errorObj.error.description);
+                },
+                500: function(jqXHR, textStatus, errorThrown) {
+                  alert("Server Error " + jqXHR.responseText);
+                }
+              }
+        });
+    </script>        
+</head>
+<body>
+
+
+</body>
+</html>

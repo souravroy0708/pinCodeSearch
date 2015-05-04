@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HealthCheck</title>
+<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+<style type="text/css">
+.health-check{
+position: relative;
+margin: 15px 0;
+padding: 39px 19px 14px;
+background-color: #fff;
+border: 1px solid #ddd;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+.heading{
+color: #bbc1cc;
+}
+.health-check{
+  left: 180px;
+}
+.span2{
+  background-color: #bbc1cc;
+  position: fixed;
+}
+.menu-left-nav-parent{
+  position: fixed;
+  width: 290px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #bbc1cc;
+}
+.menu-left-nav-parent ul{
+  list-style-type: none;
+  top: 69px;
+  position: absolute;
+  margin: 0;
+  width: 100%;
+}
+.menu-left-nav-parent ul li{
+  height: 39px;
+}
+.menu-left-nav-parent ul li a{
+  color: #fff;
+  text-decoration: none;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.menu-left-nav-parent ul li a span{
+  display: table-cell;
+  vertical-align: middle;
+}
+.menu-left-nav-parent ul li a:hover{
+  color: red;
+}
+.menu-left-nav-parent ul .active{
+  background-color: #0088cc;
+  color: #000;
+}
+
+.wrap-div{
+  position: absolute;
+  left: 300px;
+  width: 76%;
+}
+.menu-right-nav-parent{
+  width: 95%;
+}
+.welcome{
+vertical-align: top;
+margin: .5rem 0;
+padding: 1rem 1.5rem;
+text-align: left;
+background: #f1faeb;
+border-color: #b7deab;
+width: 325px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 142px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="menu-left-nav-parent">
+  <img src="http://static.freshersworld.com/images/freshersworld.png" alt="freshersworld logo" border="0">
+  <ul class="menu-left-nav">  
+    <li data-id="solr"><a href="#solr"><span><i class="icon-chevron-right"></i> SOLR HEALTH CHECK</span></a></li>
+    <li data-id="database"><a href="#database"><span><i class="icon-chevron-right"></i>DATABASE HEALTH CHECK</span></a></li>
+    <li data-id="settings"><a href="#settings"><span><i class="icon-chevron-right"></i>SETTINGS</span></a></li>
+  </ul>
+</div>
+
+
+<div class="wrap-div">
+
+<div class="menu-right-nav-parent">
+
+  <div class="welcome custom">
+    <h3 class="heading">Welcome!</h3>
+    <p>
+      The single point for a quick health check :)
+    </p>
+  </div>
+
+  <div class="solr hide custom">
+  <section id="solr">
+  <h3 class="heading">SOLR HEALTH CHECK</h3>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>URL</th>
+        <th>STATUS</th>
+        <th>RESPONSE TIME(In Second)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for solr_data in solr_health_check %}
+      <tr>
+            <td>{{solr_data.url}}</td>
+            <td>{{solr_data.status_code}}</td> 
+            <td>{{solr_data.response_time}}</td>
+      </tr>
+      {% endfor %}
+             
+    </tbody>
+  </table>
+  </section>
+  </div>
+  
+  <div class="database hide custom">
+  <section id="database">
+  <h3 class="heading">DATABASE HEALTH CHECK</h3>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>DATABASE HOST</th>
+        <th>DATABASE NAME</th>
+        <th>STATUS</th>
+        <th>RESPONSE TIME(In Second)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{database_model_test_output.database_host}}</td>
+        <td>{{database_model_test_output.database_name}}</td>
+        <td>{{database_model_test_output.database_setting_test}}</td>
+        <td>{{database_model_test_output.response_time}}</td> 
+       </tr>
+    </tbody>
+  </table>
+  </section>
+  </div>
+  
+  <div class="settings hide custom">
+  <section id="settings">
+  <h3 class="heading">SETTINGS</h3>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Variable</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for key,val in settings_data.items %}
+      <tr>
+            <td>{{key}}</td>
+            <td>{{val|safe}}</td> 
+      </tr>
+       {% endfor %}
+    </tbody>
+  </table>
+  </section>
+  </div>
+</div>
+
+</div> 
+
+</body>
+<script src="/static/bootstrap/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script>
+
+$('.menu-left-nav li').click(function(e){
+  $(e.currentTarget).parents('ul').children('li').removeClass("active");
+  $(e.currentTarget).addClass('active');  
+  $("div.welcome").addClass("hide");
+  $("div.custom").addClass("hide");
+  $("div."+$(e.currentTarget).attr("data-id")).removeClass("hide");
+});
+</script>
+
+
+
+</html>

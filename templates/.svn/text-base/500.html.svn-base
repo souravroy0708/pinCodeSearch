@@ -1,0 +1,13 @@
+<html>
+<head>
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<title>500 INTERNAL SERVER ERROR</title>
+</head>
+
+<body>
+<div class="container">
+<h1>500 : Internal Server Error</h1>
+<h2>Please check the logs for more information<h2>
+
+</body>
+</html>

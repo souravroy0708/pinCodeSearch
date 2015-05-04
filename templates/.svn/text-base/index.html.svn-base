@@ -1,0 +1,100 @@
+<html>
+<head>
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<title>REST API</title>
+</head>
+
+<body>
+<div class="container">
+<h2>Jobmentoronline</h2>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th align="left">URL</th>
+<th align="right">HTTP Verb</th>
+<th align="center">Functionality</th>
+</tr></thead>
+<tbody>
+	
+<tr>
+<td align="left">/v0/test-details</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/test-details/">retrieving test details</a></td>
+</tr>
+<tr>
+<td align="left">/v1/test/</td>
+<td align="right">POST,PUT,PATCH,DELETE</td>
+<td align="center"><a href="/v1/test/">create,edit,update,delete a test</a></td>
+</tr>
+
+<tr>
+<td align="left">/v0/schedule-details</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/schedule-details/">retrieving schedule details</a></td>
+</tr>
+<tr>
+<td align="left">/v1/schedule/</td>
+<td align="right">POST,PUT,PATCH,DELETE</td>
+<td align="center"><a href="/v1/schedule/">create,edit,update,delete a schedule</a></td>
+</tr>
+
+<tr>
+<td align="left">/v0/result-details</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/result-details/">retrieving result details</a></td>
+</tr>
+<tr>
+<td align="left">/v1/result/</td>
+<td align="right">POST,PUT,PATCH,DELETE</td>
+<td align="center"><a href="/v1/result/">create,edit,update,delete a result</a></td>
+</tr>
+
+<tr>
+<td align="left">/v0/question-details</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/question-details/">retrieving question details</a></td>
+</tr>
+<tr>
+<td align="left">/v1/question/</td>
+<td align="right">POST,PUT,PATCH,DELETE</td>
+<td align="center"><a href="/v1/question/">create,edit,update,delete a question</a></td>
+</tr>
+
+<tr>
+<td align="left">/v0/client-details</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/client-details/">retrieving test client</a></td>
+</tr>
+<tr>
+<td align="left">/v1/client/</td>
+<td align="right">POST,PUT,PATCH,DELETE</td>
+<td align="center"><a href="/v1/client/">create,edit,update,delete a client</a></td>
+</tr>
+
+<tr>	
+<td align="left">/v0/client-schedule-details</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/client-schedule-details/">retrieving client schedule details</a></td>
+</tr>
+<tr>
+<td align="left">/v1/clientschedule/</td>
+<td align="right">POST,PUT,PATCH,DELETE</td>
+<td align="center"><a href="/v1/clientschedule/">create,edit,update,delete a schedule</a></td>
+</tr>
+
+<tr>
+<td align="left">/v0/section-details</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/section-details/">retrieving section details</a></td>
+</tr>
+<tr>
+<td align="left">/v1/section/</td>
+<td align="right">POST,PUT,PATCH,DELETE</td>
+<td align="center"><a href="/v1/section/">create,edit,update,delete a schedule</a></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</body>
+</html>

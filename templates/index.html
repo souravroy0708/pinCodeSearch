@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">	
+	<head>	
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	
+			<title>
+				Rest API
+				</title>	
+<body>
+<div class="container">
+<h2>Pin Code Search API</h2>
+<table>
+<thead><tr>
+<th align="left">URL</th>
+<th align="right">HTTP Verb</th>
+<th align="center">Functionality</th>
+</tr></thead>
+<tbody>
+
+
+<td align="left">/v1/pinCodeSearch/</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v1/pinCodeSearch/">Get the list of record from data base</a></td>
+</tr>
+
+<td align="left">/v1/pinCodeSearch/3/</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v1/pinCodeSearch/3/">Get the details  of particular record from data base</a></td>
+</tr>
+
+<td align="left">/v1/pinCodeSearch/?taluk=Rangareddy</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v1/pinCodeSearch/?taluk=Rangareddy">Get the list of record according search criteria</a></td>
+</tr>
+	
+<tr>
+<td align="left">/v0/pinCodeSearch-details/</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/pinCodeSearch-details/">Get the list of record from data base</a></td>
+</tr>
+<tr>
+	
+<tr>
+<td align="left">/v0/pinCodeSearch-details/?pinCode=509208</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/pinCodeSearch-details/?pinCode=509208">Get the list of record from data base</a></td>
+</tr>
+<tr>
+	
+<tr>
+<td align="left">/v0/pinCodeSearch-details/?id=3</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/pinCodeSearch-details/?id=3">Get the details of particular record from data base</a></td>
+</tr>
+
+
+	
+<td align="left">/v1/pinCodeSearch/</td>
+<td align="right">POST</td>
+<td align="center">Insert a new record in database through google chrome extension Postman</td>
+</tr>
+
+<td align="left">/v1/pinCodeSearch/</td>
+<td align="right">PUT OR PATCH</td>
+<td align="center">Edit OR Update record through google chrome extension Postman</td>
+</tr>
+
+<td align="left">/v1/pinCodeSearch/</td>
+<td align="right">DELETE</td>
+<td align="center">Delete record through google chrome extension Postman</td>
+</tr>
+</tbody>
+</table>
+<style type="text/css">
+table { 
+color: #333;
+font-family: Helvetica, Arial, sans-serif;
+width: 100%; 
+border-collapse: collapse; 
+border-spacing: 0; 
+}
+
+td, th { 
+border: 1px solid red; /* No more visible border */
+height: 30px; 
+transition: all 0.3s;  /* Simple transition for hover effect */
+}
+
+th {
+background: #DFDFDF;  /* Darken header a bit */
+font-weight: bold;
+}
+
+td {
+background: #FAFAFA;
+text-align: center;
+}
+
+/* Cells in even rows (2,4,6...) are one color */ 
+tr:nth-child(even) td { background: #F1F1F1; }   
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */ 
+tr:nth-child(odd) td { background: #FEFEFE; }  
+
+tr td:hover { background: #666; color: #FFF; } /* Hover cell effect! */
+}
+</style>
+</body>
+</html>

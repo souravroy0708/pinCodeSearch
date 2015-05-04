@@ -1,0 +1,384 @@
+<html>
+<head>
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<title>404 : Invalid or Wrong URL</title>
+</head>
+
+<body>
+<div class="container">
+<h1>404 : Invalid or Wrong URL</h1>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th align="left">URL</th>
+<th align="right">HTTP Verb</th>
+<th align="center">Functionality</th>
+</tr></thead>
+<tbody>
+<tr>
+<td align="left">/v0/employers</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/employers">retrieving employers</a></td>
+</tr>
+<tr>
+<td align="left">/v0/employers/{id}</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/employers/2">retrieving employee</a></td>
+</tr>
+<tr>
+<td align="left">/v0/employers/{id}/hiring-folders</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/employers/2/hiring-folders">retrieving hiring folders</a></td>
+</tr>
+<tr>
+<td align="left">/v0/employers/{id}/hiring-folders/{id}</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/employers/2/hiring-folders/2">retrieving hiring folders details</a></td>
+</tr>
+<tr>
+<td align="left">/v0/employers/{id}/hiring-folders/{id}/freshers-list</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/employers/2/hiring-folders/2/freshers-list">retrieving selected freshers list</a></td>
+</tr>
+<tr>
+<td align="left">/v0/employers/{id}/hiring-folders/{id}/shortlist</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/employers/2/hiring-folders/2/shortlist">retrieving shortlisted freshers list</a></td>
+</tr>
+<tr>
+<td align="left">/v0/employers/{id}/hiring-folders/{id}/callletter</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/employers/2/hiring-folders/2/callletter">retrieving freshers list who got call letter</a></td>
+</tr>
+<tr>
+<td align="left">/v0/employers/{id}/hiring-folders/{id}/accepted</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/employers/2/hiring-folders/2/accepted">retrieving freshers list who accepted</a></td>
+</tr>
+<tr>
+<td align="left">/v0/employers/{id}/hiring-folders/{id}/testattendance</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/employers/2/hiring-folders/2/testattendance">retrieving freshers who gave test </a></td>
+</tr>
+<tr>
+<td align="left">/v0/employers/{id}/hiring-folders/{id}/jobsoffer</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/employers/2/hiring-folders/2/jobsoffer">retrieving freshers list who got job offer</a></td>
+</tr>
+<tr>
+<td align="left">/v0/employers/{id}/jobs</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/employers/2/jobs">retrieving posted jobs</a></td>
+</tr>
+<tr>
+<td align="left">/v0/employers/{id}/jobs/{id}</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/employers/2/jobs/12">retrieving detail of a job</a></td>
+</tr>
+<tr>
+<td align="left">/v0/employers/{id}/jobs/{id}/applications-received</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/employers/2/jobs/12/applications-received">retrieving response on a job </a></td>
+</tr>
+<tr>
+<td align="left">/v0/employers/{id}/status</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/employers/2/status">retrieving status of employee</a></td>
+</tr>
+
+<tr>
+<td align="left">/v0/employers/</td>
+<td align="right">POST</td>
+<td>
+<form id="employerspost" method="post" action="/v0/employers/">
+{%csrf_token%}
+<input type="hidden" name="employers" value="employers" /> 
+<a onclick="document.getElementById('employerspost').submit();">creating a employee</a>
+</form>
+</td>
+</tr>
+
+<tr>
+<td align="left">/v0/employers/{id}/hiring-folders</td>
+<td align="right">POST</td>
+<td>
+<form id="employersposthiringfolders" method="post" action="/v0/employers/2/hiring-folders/">
+{%csrf_token%}
+<input type="hidden" name="employershiringfolderspost" value="employershiringfolderspost" /> 
+<a onclick="document.getElementById('employersposthiringfolders').submit();">creating a hiring folder</a>
+</form>
+</td>
+</tr>
+
+<tr>
+<td align="left">/v0/employers/{id}/hiring-folders/{id}/shortlist</td>
+<td align="right">POST</td>
+<td>
+<form id="employerspostshortlist" method="post" action="/v0/employers/2/hiring-folders/2/shortlist/">
+{%csrf_token%}
+<input type="hidden" name="employersshortlistpost" value="employersshortlistpost" /> 
+<a onclick="document.getElementById('employerspostshortlist').submit();">creating a shortlist</a>
+</form>
+</td>
+</tr>
+
+<tr>
+<td align="left">/v0/employers/{id}/hiring-folders/{id}/callletter</td>
+<td align="right">POST</td>
+<td>
+<form id="employerspostcallletter" method="post" action="/v0/employers/2/hiring-folders/2/callletter/">
+{%csrf_token%}
+<input type="hidden" name="employerscallletterpost" value="employerscallletterpost" /> 
+<a onclick="document.getElementById('employerspostcallletter').submit();">creating a freshers list who will get callletter</a>
+</form>
+</td>
+</tr>
+
+<tr>
+<td align="left">/v0/employers/{id}/hiring-folders/{id}/accepted</td>
+<td align="right">POST</td>
+<td>
+<form id="employerspostaccepted" method="post" action="/v0/employers/2/hiring-folders/2/accepted/">
+{%csrf_token%}
+<input type="hidden" name="employersacceptedpost" value="employersacceptedpost" /> 
+<a onclick="document.getElementById('employerspostaccepted').submit();">creating a freshers list who accepted calletter</a>
+</form>
+</td>
+</tr>
+
+<tr>
+<td align="left">/v0/employers/{id}/hiring-folders/{id}/testattendance</td>
+<td align="right">POST</td>
+<td>
+<form id="employersposttestattendance" method="post" action="/v0/employers/2/hiring-folders/2/testattendance/">
+{%csrf_token%}
+<input type="hidden" name="employerstestattendancepost" value="employerstestattendancepost" /> 
+<a onclick="document.getElementById('employersposttestattendance').submit();">creating a freshers list who gave test</a>
+</form>
+</td>
+</tr>
+
+<tr>
+<td align="left">/v0/employers/{id}/hiring-folders/{id}/jobsoffer</td>
+<td align="right">POST</td>
+<td>
+<form id="employerspostjobsoffer" method="post" action="/v0/employers/2/hiring-folders/2/jobsoffer/">
+{%csrf_token%}
+<input type="hidden" name="employersjobsofferpost" value="employersjobsofferpost" /> 
+<a onclick="document.getElementById('employerspostjobsoffer').submit();">creating a freshers list who got job offer</a>
+</form>
+</td>
+</tr>
+
+<tr>
+<td align="left">/v0/employers/{id}/jobs</td>
+<td align="right">POST</td>
+<td>
+<form id="employerspostjobs" method="post" action="/v0/employers/2/jobs/">
+{%csrf_token%}
+<input type="hidden" name="employersjobspost" value="employersjobspost" /> 
+<a onclick="document.getElementById('employerspostjobs').submit();">creating a job</a>
+</form>
+</td>
+</tr>
+
+</tbody>
+</div>
+<div class="container">
+</table><h2>Freshers</h2>
+
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th align="left">URL</th>
+<th align="right">HTTP Verb</th>
+<th align="center">Functionality</th>
+</tr></thead>
+<tbody>
+<tr>
+<td align="left">/v0/freshers</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/freshers">retrieving freshers</a></td>
+</tr>
+<tr>
+<td align="left">/v0/freshers/{id}</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/freshers/2">retrieving fresher</a></td>
+</tr>
+<tr>
+<td align="left">/v0/freshers/{id}/personal-details</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/freshers/2/personal-details">retrieving personal details of a freshers</a></td>
+</tr>
+<tr>
+<td align="left">/v0/freshers/{id}/account-details</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/freshers/2/account-details">retrieving account details of a freshers</a></td>
+</tr>
+<tr>
+<td align="left">/v0/freshers/{id}/account-details/alert-subscriptions</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/freshers/2/account-details/alert-subscriptions">retrieving alert subscription details of a freshers</a></td>
+</tr>
+<tr>
+<td align="left">/v0/freshers/{id}/educational-details</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/freshers/2/educational-details">retrieving education details of a freshers</a></td>
+</tr>
+<tr>
+<td align="left">/v0/freshers/{id}/technical-details</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/freshers/2/technical-details">retrieving technical details of a freshers</a></td>
+</tr>
+<tr>
+<td align="left">/v0/freshers/{id}/project-work</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/freshers/2/project-work">retrieving project details of a freshers</a></td>
+</tr>
+<tr>
+<td align="left">/v0/freshers/{id}/language-known</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/freshers/2/language-known">retrieving language known details of a freshers</a></td>
+</tr>
+<tr>
+<td align="left">/v0/freshers/{id}/competitive-exam-scores</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/freshers/2/competitive-exam-scores">retrieving competitive exam score details of a freshers</a></td>
+</tr>
+<tr>
+<td align="left">/v0/freshers/{id}/certification-details</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/freshers/2/certification-details">retrieving certification details of a freshers</a></td>
+</tr>
+<tr>
+<td align="left">/v0/freshers/{id}/training-details</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/freshers/2/training-details">retrieving training details of a freshers</a></td>
+</tr>
+<tr>
+<td align="left">/v0/freshers/{id}/career-preferences</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/freshers/2/career-preferences">retrieving career details of a freshers</a></td>
+</tr>
+<tr>
+
+
+<td align="left">/v0/freshers/</td>
+<td align="right">POST</td>
+<td align="center">
+<form id="myform" method="post" action="/v0/freshers/">
+{%csrf_token%}
+<input type="hidden" name="freshers" value="freshers" /> 
+<a onclick="document.getElementById('myform').submit();">Creating freshers</a>
+</form>
+</td>
+
+</tr>
+<tr>
+<td align="left">/v0/freshers/{id}/personal-details</td>
+<td align="right">PUT</td>
+<td>
+<form id="fresherspostpersonal" method="post" action="/v0/freshers/2/personal-details/">
+{%csrf_token%}
+<input type="hidden" name="fresherspersonalpost" value="fresherspersonalpost" /> 
+<a onclick="document.getElementById('fresherspostpersonal').submit();">updating fresher's personal details</a>
+</form>
+</td>
+</tr>
+
+<tr>
+<td align="left">/v0/freshers/{id}/educational-details</td>
+<td align="right">PUT</td>
+<td>
+<form id="freshersposteducational" method="post" action="/v0/freshers/2/educational-details/">
+{%csrf_token%}
+<input type="hidden" name="fresherseducationalpost" value="fresherseducationalpost" /> 
+<a onclick="document.getElementById('freshersposteducational').submit();">updating fresher's educational details</a>
+</form>
+</td>
+</tr>
+
+<tr>
+<td align="left">/v0/freshers/{id}/career-related-information</td>
+<td align="right">PUT</td>
+<td>
+<form id="fresherspostcareerrelated" method="post" action="/v0/freshers/2/career-related-information/">
+{%csrf_token%}
+<input type="hidden" name="fresherscareerrelatedpost" value="fresherscareerrelatedpost" /> 
+<a onclick="document.getElementById('fresherspostcareerrelated').submit();">updating fresher's career-related-information details</a>
+</form>
+</td>
+</tr>
+
+<tr>
+<td align="left">/v0/freshers/{id}/career-preferences</td>
+<td align="right">PUT</td>
+<td>
+<form id="fresherspostcareerpreferences" method="post" action="/v0/freshers/2/career-preferences/">
+{%csrf_token%}
+<input type="hidden" name="fresherscareerpreferencespost" value="fresherscareerpreferencespost" /> 
+<a onclick="document.getElementById('fresherspostcareerpreferences').submit();">updating fresher's career preferences</a>
+</form>
+</td>
+</tr>
+
+<tr>
+<td align="left">/v0/freshers/{id}/account-details</td>
+<td align="right">PUT</td>
+<td>
+<form id="fresherspostaccount" method="post" action="/v0/freshers/2/account-details/">
+{%csrf_token%}
+<input type="hidden" name="freshersaccountpost" value="freshersaccountpost" /> 
+<a onclick="document.getElementById('fresherspostaccount').submit();">updating fresher's account details</a>
+</form>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="container">
+<h2>Jobs</h2>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th align="left">URL</th>
+<th align="right">HTTP Verb</th>
+<th align="center">Functionality</th>
+</tr></thead>
+<tbody>
+<tr>
+<td align="left">/v0/jobs</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/jobs">retrieving jobs</a></td>
+</tr>
+<tr>
+<td align="left">/v0/jobs/{id}</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/jobs/12">retrieving a job of given id</a></td>
+</tr>
+<tr>
+<td align="left">/v0/jobs/{id}/applications-received</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/jobs/12/applications-received">retrieving response on a given job id</a></td>
+</tr>
+<tr>
+<td align="left">/v0/jobs/{id}/job-details</td>
+<td align="right">GET</td>
+<td align="center"><a href="/v0/jobs/12/jobs-details">retrieving job-details of given job id</a></td>
+</tr>
+
+<tr>
+<td align="left">/v0/jobs/{id}/freshers</td>
+<td align="right">PUT</td>
+<td>
+<form id="jobspostresponse" method="post" action="/v0/jobs/12/freshers/">
+{%csrf_token%}
+<input type="hidden" name="jobsresponsepost" value="jobsresponsepost" /> 
+<a onclick="document.getElementById('jobspostresponse').submit();">Requesting for apply Job</a>
+</form>
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+</body>
+</html>
