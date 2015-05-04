@@ -1,7 +1,7 @@
 import os.path
 # Django settings for pinCode project.
 
-DEBUG = True
+DEBUG = True #production make it to False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -15,11 +15,11 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'pinCode',                      # Or path to database file if using sqlite3.
-            'USER': 'root',
-            'PASSWORD': 'admin',
-            'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-            'PORT': '3306',
+            'NAME': 'pinCode', #you need to replace with your database name                     
+            'USER': 'root', #you need to replace with your mysql username   
+            'PASSWORD': 'admin', #you need to replace with your mysql password
+            'HOST': '', #you need to replace with your mysql host name   
+            'PORT': '',
     }
 }
 
