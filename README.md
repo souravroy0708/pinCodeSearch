@@ -104,5 +104,6 @@ https://frozen-coast-1260.herokuapp.com/v0/pinCodeSearch-details/?limit=50&offse
 
 metadata: {
 totalCount: 50000,    (Total number of record in db)
+
 displayCount: 25 (Default number of record is 10,we can chnage it by query string limit parameter value)
 }
