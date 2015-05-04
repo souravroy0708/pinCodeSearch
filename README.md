@@ -1,7 +1,11 @@
 *******Create a new record in db(through crome extension postman)************
+
 Method: POST
+
 URL: https://frozen-coast-1260.herokuapp.com/v1/pinCodeSearch/
+
 Data:
+
 {
  "officeName":"Purba Amarpur",
  "pinCode":"712616",
@@ -16,10 +20,15 @@ Data:
 }
 
 *******Edit a record in db(through crome extension postman)************
+
 Method: PUT (To edit more number of field we are using PUT method,All required field)
+
 URL: https://frozen-coast-1260.herokuapp.com/v1/pinCodeSearch/{id}
+
 Ex: https://frozen-coast-1260.herokuapp.com/v1/pinCodeSearch/154824/
+
 Data:
+
 {
  "officeType":"B.O",
  "deliveryStatus":"Delivery",
@@ -32,21 +41,28 @@ Data:
 }
 
 Method: PATCH (To update status or less number of field we are using PATCH method)
-URL: https://frozen-coast-1260.herokuapp.com/v1/pinCodeSearch/{id}
-ex: https://frozen-coast-1260.herokuapp.com/v1/pinCodeSearch/1/
-Data:
 
+URL: https://frozen-coast-1260.herokuapp.com/v1/pinCodeSearch/{id}
+
+ex: https://frozen-coast-1260.herokuapp.com/v1/pinCodeSearch/1/
+
+Data:
 {
 "deliveryStatus":"NonDelivery"
 }
 
 *******Delete a record from db(through crome extension postman)************
+
 Method: Delete
+
 URL: https://frozen-coast-1260.herokuapp.com/v1/pinCodeSearch/{id}
+
 Ex: https://frozen-coast-1260.herokuapp.com/v1/pinCodeSearch/1/
 
 **********List record*********
+
 search details or particular record
+
 URL: https://frozen-coast-1260.herokuapp.com/v0/pinCodeSearch-details/?id=154823
 
 If id is not present in db i have did validation (Id does not exist in database)
