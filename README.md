@@ -1,4 +1,4 @@
-*******Create a new record in db(through crome extension postman)************
+*******Create a new record in db(through chrome extension postman)************
 
 Method: POST
 
@@ -19,7 +19,7 @@ Data:
  "stateName":"West Bengal"
 }
 
-*******Edit a record in db(through crome extension postman)************
+*******Edit a record in db(through chrome extension postman)************
 
 Method: PUT (To edit more number of field we are using PUT method,All required field)
 
@@ -51,7 +51,7 @@ Data:
 "deliveryStatus":"NonDelivery"
 }
 
-*******Delete a record from db(through crome extension postman)************
+*******Delete a record from db(through chrome extension postman)************
 
 Method: Delete
 
@@ -66,31 +66,39 @@ search details or particular record
 URL: https://frozen-coast-1260.herokuapp.com/v0/pinCodeSearch-details/?id=154823
 
 If id is not present in db i have did validation (Id does not exist in database)
+
 URL: https://frozen-coast-1260.herokuapp.com/v0/pinCodeSearch-details/?id=9999999999
 
 get all list of record
+
 URL: https://frozen-coast-1260.herokuapp.com/v0/pinCodeSearch-details/
 
 search record by  districtName
 http:https://frozen-coast-1260.herokuapp.com/v0/pinCodeSearch-details/?districtName={districtName}
 
 search record by  stateName
+
 http:https://frozen-coast-1260.herokuapp.com/?stateName={stateName}
 
 search record by  pinCode
+
 http:https://frozen-coast-1260.herokuapp.com/?pinCode={pinCode}
 
 pincode should be integer value (pinCode should be integer)
+
 https://frozen-coast-1260.herokuapp.com/v0/pinCodeSearch-details/?pinCode=234s
 
 
 search record by  taluk
+
 https://frozen-coast-1260.herokuapp.com/v0/pinCodeSearch-details/?taluk={taluk}
 
 search record by  circleName
+
 https://frozen-coast-1260.herokuapp.com/v0/pinCodeSearch-details/?circleName={circleName}
 
 search record by  limit and offset
+
 https://frozen-coast-1260.herokuapp.com/v0/pinCodeSearch-details/?limit=50&offset=10
 
 
